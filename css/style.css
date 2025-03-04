@@ -985,10 +985,12 @@ html {
 /*** Testimonial End ***/
 
 /* Position the buttons fixed at the bottom right */
-.back-to-top, .whatsapp-button {
+/* General button styling */
+.back-to-top,
+.whatsapp-button,
+.gmail-button,
+.phone-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1000,36 +1002,48 @@ html {
     transition: all 0.3s ease;
 }
 
-/* Position the WhatsApp button near the back-to-top button */
+/* Position the back-to-top button */
+.back-to-top {
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--bs-primary); /* Blue */
+}
+
+/* Position the WhatsApp button */
 .whatsapp-button {
-    position: fixed;
     bottom: 80px;
     right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
     background-color: #25D366; /* WhatsApp Green */
 }
 
-.whatsapp-button i {
+/* Position the Gmail button */
+.gmail-button {
+    bottom: 140px;
+    right: 20px;
+    background-color: #D14836; /* Gmail Red */
+}
+
+/* Position the phone call button */
+.phone-button {
+    bottom: 200px;
+    right: 20px;
+    background-color: #34B7F1; /* Light Blue */
+}
+
+/* Icon styling */
+.back-to-top i,
+.whatsapp-button i,
+.gmail-button i,
+.phone-button i {
     color: white !important;
     font-size: 24px;
 }
 
-.whatsapp-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-
 /* Hover effects */
-.back-to-top:hover, .whatsapp-button:hover {
+.back-to-top:hover,
+.whatsapp-button:hover,
+.gmail-button:hover,
+.phone-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }

@@ -716,400 +716,307 @@
             </div>
         </div> -->
 
-    <div class="container-fluid service py-5">
-      <div class="container py-5">
-        <div class="text-center mb-5">
-          <h4 class="text-primary">Our Products</h4>
-          <h1 class="display-4 mb-4">Premium Selection</h1>
+        <div class="container-fluid service py-5">
+          <div class="container py-5">
+            <div class="text-center mb-5">
+              <h4 class="text-primary">Our Products</h4>
+              <h1 class="display-4 mb-4">Premium Selection</h1>
+            </div>
+        
+            <!-- Category Buttons -->
+            <div class="text-center mb-4">
+              <button class="btn btn-primary m-2 category-btn" data-category="hydraulic">
+                Hydraulic Pavers
+              </button>
+              <button class="btn btn-primary m-2 category-btn" data-category="shotblasted">
+                Shot Blasted Pavers
+              </button>
+              <button class="btn btn-primary m-2 category-btn" data-category="grass">
+                Grass Pavers
+              </button>
+              <button class="btn btn-primary m-2 category-btn" data-category="solid">
+                Solid Blocks
+              </button>
+              <button class="btn btn-primary m-2 category-btn" data-category="kerb">
+                Kerb Stones
+              </button>
+              <button class="btn btn-primary m-2 category-btn" data-category="saucer">
+                Saucer Drain
+              </button>
+            </div>
+        
+            <!-- Product List -->
+            <div class="row g-4" id="product-list">
+              <!-- Products will be dynamically inserted here -->
+            </div>
+          </div>
         </div>
-
-        <!-- Category Buttons -->
-        <div class="text-center mb-4">
-          <button
-            class="btn btn-primary m-2 category-btn"
-            data-category="hydraulic"
-          >
-            Hydraulic Pavers
-          </button>
-          <button
-            class="btn btn-primary m-2 category-btn"
-            data-category="shotblasted"
-          >
-            Shot Blasted Pavers
-          </button>
-          <button
-            class="btn btn-primary m-2 category-btn"
-            data-category="grass"
-          >
-            Grass Pavers
-          </button>
-          <button
-            class="btn btn-primary m-2 category-btn"
-            data-category="solid"
-          >
-            Solid Blocks
-          </button>
-          <button class="btn btn-primary m-2 category-btn" data-category="kerb">
-            Kerb Stones
-          </button>
-          <button
-            class="btn btn-primary m-2 category-btn"
-            data-category="saucer"
-          >
-            Saucer Drain
-          </button>
-        </div>
-
-        <!-- Product List -->
-        <div class="row g-4" id="product-list">
-          <!-- Products will be dynamically inserted here -->
-        </div>
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const productsData = {
-          hydraulic: [
-            {
-              name: "1/100mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const productsData = {
+              hydraulic: [
+                {
+                  name: "1/100mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 1/100mm - Image 1",
+                    "Description for 1/100mm - Image 2",
+                  ],
+                },
+                {
+                  name: "3/80mm",
+                  images: ["img/UNISTONE/product_2.jpg", "img/UNISTONE/product_3.jpg"],
+                  descriptions: [
+                    "Description for 3/80mm - Image 1",
+                    "Description for 3/80mm - Image 2",
+                  ],
+                },
+                {
+                  name: "5/60mm",
+                  images: ["img/UNISTONE/product_3.jpg", "img/UNISTONE/product_1.jpg"],
+                  descriptions: [
+                    "Description for 5/60mm - Image 1",
+                    "Description for 5/60mm - Image 2",
+                  ],
+                },
               ],
-              descriptions: [
-                "Description for 1/100mm - Image 1",
-                "Description for 1/100mm - Image 2",
+              shotblasted: [
+                {
+                  name: "450 x 450 x 65mm",
+                  images: ["img/UNISTONE/product_4.jpg", "img/UNISTONE/product_5.jpg"],
+                  descriptions: [
+                    "Description for 450 x 450 x 65mm - Image 1",
+                    "Description for 450 x 450 x 65mm - Image 2",
+                  ],
+                },
+                {
+                  name: "2400 x 200 x 60mm",
+                  images: ["img/UNISTONE/product_5.jpg", "img/UNISTONE/product_6.jpg"],
+                  descriptions: [
+                    "Description for 2400 x 200 x 60mm - Image 1",
+                    "Description for 2400 x 200 x 60mm - Image 2",
+                  ],
+                },
+                {
+                  name: "COBBLES 115 x 115 x 60mm",
+                  images: ["img/UNISTONE/product_6.jpg", "img/UNISTONE/product_7.jpg"],
+                  descriptions: [
+                    "Description for COBBLES 115 x 115 x 60mm - Image 1",
+                    "Description for COBBLES 115 x 115 x 60mm - Image 2",
+                  ],
+                },
+                {
+                  name: "600 x 400 x 80mm",
+                  images: ["img/UNISTONE/product_7.jpg", "img/UNISTONE/product_4.jpg"],
+                  descriptions: [
+                    "Description for 600 x 400 x 80mm - Image 1",
+                    "Description for 600 x 400 x 80mm - Image 2",
+                  ],
+                },
               ],
-            },
-            {
-              name: "3/80mm",
-              images: [
-                "img/UNISTONE/product_2.jpg",
-                "img/UNISTONE/product_3.jpg",
+              grass: [
+                {
+                  name: "ARTLINE (300 x 300 x 120mm)",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for ARTLINE (300 x 300 x 120mm) - Image 1",
+                    "Description for ARTLINE (300 x 300 x 120mm) - Image 2",
+                  ],
+                },
+                {
+                  name: "ARTLINE (222 x 197 x 80mm)",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for ARTLINE (222 x 197 x 80mm) - Image 1",
+                    "Description for ARTLINE (222 x 197 x 80mm) - Image 2",
+                  ],
+                },
+                {
+                  name: "BEACH PEBBLE PAVER (3329 x 49 x 80mm)",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for BEACH PEBBLE PAVER (3329 x 49 x 80mm) - Image 1",
+                    "Description for BEACH PEBBLE PAVER (3329 x 49 x 80mm) - Image 2",
+                  ],
+                },
+                {
+                  name: "AQUALOCK (238 x 168 x 80mm)",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for AQUALOCK (238 x 168 x 80mm) - Image 1",
+                    "Description for AQUALOCK (238 x 168 x 80mm) - Image 2",
+                  ],
+                },
               ],
-              descriptions: [
-                "Description for 3/80mm - Image 1",
-                "Description for 3/80mm - Image 2",
+              solid: [
+                {
+                  name: "300 x 200 x 200mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 300 x 200 x 200mm - Image 1",
+                    "Description for 300 x 200 x 200mm - Image 2",
+                  ],
+                },
+                {
+                  name: "300 x 200 x 150mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 300 x 200 x 150mm - Image 1",
+                    "Description for 300 x 200 x 150mm - Image 2",
+                  ],
+                },
+                {
+                  name: "300 x 200 x 100mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 300 x 200 x 100mm - Image 1",
+                    "Description for 300 x 200 x 100mm - Image 2",
+                  ],
+                },
               ],
-            },
-            {
-              name: "5/60mm",
-              images: [
-                "img/UNISTONE/product_3.jpg",
-                "img/UNISTONE/product_1.jpg",
+              kerb: [
+                {
+                  name: "400 x 300 x 150mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 400 x 300 x 150mm - Image 1",
+                    "Description for 400 x 300 x 150mm - Image 2",
+                  ],
+                },
+                {
+                  name: "400 x 300 x 100mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 400 x 300 x 100mm - Image 1",
+                    "Description for 400 x 300 x 100mm - Image 2",
+                  ],
+                },
+                {
+                  name: "3400 x 200 x 150mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 3400 x 200 x 150mm - Image 1",
+                    "Description for 3400 x 200 x 150mm - Image 2",
+                  ],
+                },
+                {
+                  name: "250 x 200 x 125mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 250 x 200 x 125mm - Image 1",
+                    "Description for 250 x 200 x 125mm - Image 2",
+                  ],
+                },
+                {
+                  name: "600 x 200 x 100mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 600 x 200 x 100mm - Image 1",
+                    "Description for 600 x 200 x 100mm - Image 2",
+                  ],
+                },
               ],
-              descriptions: [
-                "Description for 5/60mm - Image 1",
-                "Description for 5/60mm - Image 2",
+              saucer: [
+                {
+                  name: "400 x 300 x 100mm",
+                  images: ["img/UNISTONE/product_1.jpg", "img/UNISTONE/product_2.jpg"],
+                  descriptions: [
+                    "Description for 400 x 300 x 100mm - Image 1",
+                    "Description for 400 x 300 x 100mm - Image 2",
+                  ],
+                },
               ],
-            },
-          ],
-          shotblasted: [
-            {
-              name: "450 x 450 x 65mm",
-              images: [
-                "img/UNISTONE/product_4.jpg",
-                "img/UNISTONE/product_5.jpg",
-              ],
-              descriptions: [
-                "Description for 450 x 450 x 65mm - Image 1",
-                "Description for 450 x 450 x 65mm - Image 2",
-              ],
-            },
-            {
-              name: "2400 x 200 x 60mm",
-              images: [
-                "img/UNISTONE/product_5.jpg",
-                "img/UNISTONE/product_6.jpg",
-              ],
-              descriptions: [
-                "Description for 2400 x 200 x 60mm - Image 1",
-                "Description for 2400 x 200 x 60mm - Image 2",
-              ],
-            },
-            {
-              name: "COBBLES 115 x 115 x 60mm",
-              images: [
-                "img/UNISTONE/product_6.jpg",
-                "img/UNISTONE/product_7.jpg",
-              ],
-              descriptions: [
-                "Description for COBBLES 115 x 115 x 60mm - Image 1",
-                "Description for COBBLES 115 x 115 x 60mm - Image 2",
-              ],
-            },
-            {
-              name: "600 x 400 x 80mm",
-              images: [
-                "img/UNISTONE/product_7.jpg",
-                "img/UNISTONE/product_4.jpg",
-              ],
-              descriptions: [
-                "Description for 600 x 400 x 80mm - Image 1",
-                "Description for 600 x 400 x 80mm - Image 2",
-              ],
-            },
-          ],
-          grass: [
-            {
-              name: "ARTLINE (300 x 300 x 120mm)",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for ARTLINE (300 x 300 x 120mm) - Image 1",
-                "Description for ARTLINE (300 x 300 x 120mm) - Image 2",
-              ],
-            },
-            {
-              name: "ARTLINE (222 x 197 x 80mm)",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for ARTLINE (222 x 197 x 80mm) - Image 1",
-                "Description for ARTLINE (222 x 197 x 80mm) - Image 2",
-              ],
-            },
-            {
-              name: "BEACH PEBBLE PAVER (3329 x 49 x 80mm)",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for BEACH PEBBLE PAVER (3329 x 49 x 80mm) - Image 1",
-                "Description for BEACH PEBBLE PAVER (3329 x 49 x 80mm) - Image 2",
-              ],
-            },
-            {
-              name: "AQUALOCK (238 x 168 x 80mm)",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for AQUALOCK (238 x 168 x 80mm) - Image 1",
-                "Description for AQUALOCK (238 x 168 x 80mm) - Image 2",
-              ],
-            },
-          ],
-          solid: [
-            {
-              name: "300 x 200 x 200mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 300 x 200 x 200mm - Image 1",
-                "Description for 300 x 200 x 200mm - Image 2",
-              ],
-            },
-            {
-              name: "300 x 200 x 150mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 300 x 200 x 150mm - Image 1",
-                "Description for 300 x 200 x 150mm - Image 2",
-              ],
-            },
-            {
-              name: "300 x 200 x 100mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 300 x 200 x 100mm - Image 1",
-                "Description for 300 x 200 x 100mm - Image 2",
-              ],
-            },
-          ],
-          kerb: [
-            {
-              name: "400 x 300 x 150mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 400 x 300 x 150mm - Image 1",
-                "Description for 400 x 300 x 150mm - Image 2",
-              ],
-            },
-            {
-              name: "400 x 300 x 100mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 400 x 300 x 100mm - Image 1",
-                "Description for 400 x 300 x 100mm - Image 2",
-              ],
-            },
-            {
-              name: "3400 x 200 x 150mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 3400 x 200 x 150mm - Image 1",
-                "Description for 3400 x 200 x 150mm - Image 2",
-              ],
-            },
-            {
-              name: "250 x 200 x 125mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 250 x 200 x 125mm - Image 1",
-                "Description for 250 x 200 x 125mm - Image 2",
-              ],
-            },
-            {
-              name: "600 x 200 x 100mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 600 x 200 x 100mm - Image 1",
-                "Description for 600 x 200 x 100mm - Image 2",
-              ],
-            },
-          ],
-          saucer: [
-            {
-              name: "400 x 300 x 100mm",
-              images: [
-                "img/UNISTONE/product_1.jpg",
-                "img/UNISTONE/product_2.jpg",
-              ],
-              descriptions: [
-                "Description for 400 x 300 x 100mm - Image 1",
-                "Description for 400 x 300 x 100mm - Image 2",
-              ],
-            },
-          ],
-        };
-
-        const categoryButtons = document.querySelectorAll(".category-btn");
-        const productList = document.getElementById("product-list");
-
-        // Track the currently active category
-        let activeCategory = "hydraulic";
-
-        // Function to load products dynamically
-        function loadProducts(category) {
-          productList.innerHTML = ""; // Clear previous products
-          const selectedProducts = productsData[category];
-
-          selectedProducts.forEach((product) => {
-            const carouselId = `carousel-${product.name.replace(
-              /[^a-zA-Z0-9]/g,
-              "-"
-            )}`;
-            const productHTML = `
-                        <div class="col-lg-4 col-md-6">
-                            <div class="service-item">
-                                <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        ${product.images
-                                          .map(
-                                            (image, index) => `
-                                            <div class="carousel-item ${
-                                              index === 0 ? "active" : ""
-                                            }">
-                                                <img src="${image}" class="d-block w-100" alt="${
-                                              product.name
-                                            }">
-                                            </div>
-                                        `
-                                          )
-                                          .join("")}
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                                <div class="border border-top-0 p-4">
-                                    <h4 class="mb-3">${product.name}</h4>
-                                    <p class="product-description">${
-                                      product.descriptions[0]
-                                    }</p>
-                                </div>
+            };
+        
+            const categoryButtons = document.querySelectorAll(".category-btn");
+            const productList = document.getElementById("product-list");
+        
+            // Track the currently active category
+            let activeCategory = "hydraulic";
+        
+            // Function to load products dynamically
+            function loadProducts(category) {
+              productList.innerHTML = ""; // Clear previous products
+              const selectedProducts = productsData[category];
+        
+              selectedProducts.forEach((product) => {
+                const carouselId = `carousel-${product.name.replace(/[^a-zA-Z0-9]/g, "-")}`;
+                const productHTML = `
+                  <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                      <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          ${product.images
+                            .map(
+                              (image, index) => `
+                            <div class="carousel-item ${index === 0 ? "active" : ""}">
+                              <img src="${image}" class="d-block w-100" alt="${product.name}" loading="lazy">
                             </div>
+                          `
+                            )
+                            .join("")}
                         </div>
-                    `;
-            productList.innerHTML += productHTML;
-          });
-
-          // Add event listeners to update description on carousel slide
-          selectedProducts.forEach((product) => {
-            const carouselId = `carousel-${product.name.replace(
-              /[^a-zA-Z0-9]/g,
-              "-"
-            )}`;
-            const carouselElement = document.getElementById(carouselId);
-            const descriptionElement =
-              carouselElement.parentElement.querySelector(
-                ".product-description"
-              );
-
-            carouselElement.addEventListener(
-              "slide.bs.carousel",
-              function (event) {
-                const activeIndex = event.to;
-                descriptionElement.textContent =
-                  product.descriptions[activeIndex];
-              }
-            );
-          });
-        }
-
-        // Function to set the active category button
-        function setActiveCategoryButton(category) {
-          categoryButtons.forEach((button) => {
-            button.classList.remove("active");
-            if (button.getAttribute("data-category") === category) {
-              button.classList.add("active");
+                        <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <div class="border border-top-0 p-4">
+                        <h4 class="mb-3">${product.name}</h4>
+                        <p class="product-description">${product.descriptions[0]}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+                productList.innerHTML += productHTML;
+              });
+        
+              // Add event listeners to update description on carousel slide
+              selectedProducts.forEach((product) => {
+                const carouselId = `carousel-${product.name.replace(/[^a-zA-Z0-9]/g, "-")}`;
+                const carouselElement = document.getElementById(carouselId);
+                const descriptionElement =
+                  carouselElement.parentElement.querySelector(".product-description");
+        
+                carouselElement.addEventListener("slide.bs.carousel", function (event) {
+                  const activeIndex = event.to;
+                  descriptionElement.textContent = product.descriptions[activeIndex];
+                });
+              });
             }
+        
+            // Function to set the active category button
+            function setActiveCategoryButton(category) {
+              categoryButtons.forEach((button) => {
+                button.classList.remove("active");
+                if (button.getAttribute("data-category") === category) {
+                  button.classList.add("active");
+                }
+              });
+            }
+        
+            // Event listener for category buttons
+            categoryButtons.forEach((button) => {
+              button.addEventListener("click", function () {
+                const category = this.getAttribute("data-category");
+                activeCategory = category; // Update the active category
+                setActiveCategoryButton(category); // Set the active button
+                loadProducts(category); // Load products for the selected category
+              });
+            });
+        
+            // Load default category (optional)
+            setActiveCategoryButton(activeCategory); // Set the default active button
+            loadProducts(activeCategory); // Load products for the default category
           });
-        }
-
-        // Event listener for category buttons
-        categoryButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const category = this.getAttribute("data-category");
-            activeCategory = category; // Update the active category
-            setActiveCategoryButton(category); // Set the active button
-            loadProducts(category); // Load products for the selected category
-          });
-        });
-
-        // Load default category (optional)
-        setActiveCategoryButton(activeCategory); // Set the default active button
-        loadProducts(activeCategory); // Load products for the default category
-      });
-    </script>
-
-    <!-- Services End -->
+        </script>
+        
+        <!-- Services End -->
 
     <!-- Projects Start -->
     <div class="container-fluid projects bg-light py-5">
